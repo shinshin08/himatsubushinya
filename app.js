@@ -31,3 +31,21 @@ cat.addEventListener("click", () => {
   ],{
     duration:250
   });
+
+                     /* ===== Ver0.4 追加ここから ===== */
+
+let solved = 0;
+
+document.getElementById("play").addEventListener("click", () => {
+
+    if(solved < 5){
+        solved++;
+    }
+
+    const percent = solved * 20;
+
+    document.getElementById("progressFill").style.width = percent + "%";
+
+});
+
+/* ===== Ver0.4 追加ここまで ===== */
