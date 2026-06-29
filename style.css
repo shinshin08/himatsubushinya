@@ -133,8 +133,18 @@ button:hover{
 }
 
 @keyframes flower{
+  0%{
+    transform:translateY(0px);
+  }
 
-0%
+  50%{
+    transform:translateY(-5px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
 
 /* ===== Ver0.4 追加ここから ===== */
 
