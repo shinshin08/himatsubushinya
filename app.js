@@ -1,9 +1,18 @@
+const examDate = new Date("2027-09-05"); // あとで試験日を変更できる
+const today = new Date();
+
+const diff = examDate - today;
+const days = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+
+document.getElementById("days").textContent = days;
+
 const messages = [
   "今日は5問だけ遊ぶニャ♪",
-  "復習するともっと強くなれるニャ！",
+  "1問ずつで大丈夫ニャ🐾",
+  "復習すると強くなるニャ！",
   "かのん、おかえり🌸",
-  "一緒に頑張ろうニャ！",
-  "疲れたら少し休憩ニャ☕"
+  "今日も一緒に頑張ろう！",
+  "いっぱいなでてニャ💕"
 ];
 
 const cat = document.getElementById("cat");
@@ -11,14 +20,16 @@ const message = document.getElementById("message");
 
 cat.addEventListener("click", () => {
 
-    cat.style.transform = "scale(1.15)";
+  const random = Math.floor(Math.random() * messages.length);
 
-    setTimeout(()=>{
-        cat.style.transform = "scale(1)";
-    },200);
+  message.textContent = messages[random];
 
-    const random = Math.floor(Math.random()*messages.length);
-
-    message.textContent = messages[random];
+  cat.animate([
+    { transform: "scale(1)" },
+    { transform: "scale(1.15)" },
+    { transform: "scale(1)" }
+  ],{
+    duration:250
+  });
 
 });
