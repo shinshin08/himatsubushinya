@@ -31,5 +31,29 @@ cat.addEventListener("click", () => {
   ],{
     duration:250
   });
+/* ===== Ver0.4 追加ここから ===== */
 
+let direction = 1;
+let position = 0;
+
+setInterval(() => {
+
+    position += direction * 3;
+
+    if(position > 60){
+        direction = -1;
+        cat.style.transform = "scaleX(-1)";
+    }
+
+    if(position < -60){
+        direction = 1;
+        cat.style.transform = "scaleX(1)";
+    }
+
+    cat.style.marginLeft = position + "px";
+
+},150);
+
+/* ===== Ver0.4 追加ここまで ===== */
 });
+
