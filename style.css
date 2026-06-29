@@ -66,3 +66,15 @@ button:active{
 button:hover{
     background:#ffc5d9;
 }
+.status{
+    margin:20px 0;
+}
+
+.progress{
+    background:#fff5f8;
+    border-radius:15px;
+    padding:12px;
+    margin-bottom:10px;
+    text-align:center;
+    color:#666;
+}
