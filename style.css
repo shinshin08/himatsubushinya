@@ -158,7 +158,7 @@ button:hover{
 }
 
 .progress-fill{
-    width:0%;
+    width:50%;
     height:100%;
     background:linear-gradient(90deg,#ffb6c1,#ff7aa8);
     transition:0.5s;
