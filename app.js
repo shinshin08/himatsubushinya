@@ -49,3 +49,22 @@ document.getElementById("play").addEventListener("click", () => {
 });
 
 /* ===== Ver0.4 追加ここまで ===== */
+
+/* ===== Ver0.5 追加ここから ===== */
+
+const playButton = document.getElementById("play");
+const quiz = document.getElementById("quiz");
+
+playButton.addEventListener("click", () => {
+
+    quiz.style.display = "block";
+
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+
+});
+
+/* ===== Ver0.5 追加ここまで ===== */
+  
