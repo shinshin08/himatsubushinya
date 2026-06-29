@@ -135,3 +135,23 @@ button:hover{
 @keyframes flower{
 
 0%
+
+/* ===== Ver0.4 追加ここから ===== */
+
+.progress-bar{
+    width:100%;
+    height:18px;
+    background:#eee;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#ffb6c1,#ff7aa8);
+    transition:0.5s;
+}
+
+/* ===== Ver0.4 追加ここまで ===== */
