@@ -1,1 +1,68 @@
 
+body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+    background:linear-gradient(#ffeef6,#fffdf7);
+    min-height:100vh;
+}
+
+.container{
+    max-width:420px;
+    margin:auto;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:#ff7aa8;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+h2{
+    text-align:center;
+    color:#555;
+}
+
+#cat{
+    font-size:110px;
+    text-align:center;
+    margin:20px 0;
+    animation:float 2.5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+#message{
+    text-align:center;
+    color:#666;
+    font-size:18px;
+}
+
+button{
+    width:100%;
+    border:none;
+    padding:15px;
+    margin-top:12px;
+    border-radius:18px;
+    background:#ffd8e6;
+    font-size:18px;
+    transition:.2s;
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+button:hover{
+    background:#ffc5d9;
+}
