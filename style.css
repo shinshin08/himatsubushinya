@@ -88,3 +88,50 @@ footer{
   margin-top:20px;
   color:#666;
 }
+
+/* ===== Ver0.3 追加ここから ===== */
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 15px rgba(0,0,0,.15);
+}
+
+#cat{
+    transition:.2s;
+    user-select:none;
+}
+
+.grass{
+    width:100%;
+    height:80px;
+    background:linear-gradient(#7fd45b,#53b53a);
+    border-radius:25px;
+    margin-top:25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.flower{
+    position:absolute;
+    font-size:22px;
+    animation:flower 2s ease-in-out infinite;
+}
+
+.flower:nth-child(1){
+    left:20px;
+    top:20px;
+}
+
+.flower:nth-child(2){
+    right:30px;
+    top:35px;
+}
+
+.flower:nth-child(3){
+    left:50%;
+    top:10px;
+}
+
+@keyframes flower{
+
+0%
