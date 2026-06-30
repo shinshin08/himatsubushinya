@@ -30,7 +30,10 @@ cat.addEventListener("click", () => {
     { transform: "scale(1)" }
   ],{
     duration:250
-  });
+
+        });
+
+});
 
                      /* ===== Ver0.4 追加ここから ===== */
 
