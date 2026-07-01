@@ -71,3 +71,31 @@ playButton.addEventListener("click", () => {
 
 /* ===== Ver0.5 追加ここまで ===== */
   
+/* ===== Ver0.6 追加ここから ===== */
+
+const answers = document.querySelectorAll(".answer");
+const result = document.getElementById("result");
+
+answers.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        if(button.dataset.answer === "1"){
+
+            result.textContent = "🎉 正解！";
+            result.style.color = "#2e8b57";
+
+        }else{
+
+            result.textContent = "❌ 不正解";
+            result.style.color = "#e74c3c";
+
+        }
+
+        result.style.display = "block";
+
+    });
+
+});
+
+/* ===== Ver0.6 追加ここまで ===== */
