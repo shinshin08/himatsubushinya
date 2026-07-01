@@ -112,6 +112,53 @@ answers.forEach(button => {
         nextButton.style.display = "block";
     });
 
+});/* ===== Ver0.8 追加ここから ===== */
+
+const questions = [
+  {
+    question: "1 + 2 = ?",
+    choices: ["2", "3", "4"],
+    answer: 1
+  },
+  {
+    question: "5 - 2 = ?",
+    choices: ["3", "2", "1"],
+    answer: 0
+  },
+  {
+    question: "3 × 3 = ?",
+    choices: ["6", "8", "9"],
+    answer: 2
+  }
+];
+
+let currentQuestion = 0;
+
+function showQuestion(index) {
+  document.getElementById("question").textContent = questions[index].question;
+
+  const buttons = document.querySelectorAll(".answer");
+
+  buttons.forEach((button, i) => {
+    button.textContent = ["① ", "② ", "③ "][i] + questions[index].choices[i];
+    button.dataset.answer = i;
+  });
+
+  result.style.display = "none";
+  nextButton.style.display = "none";
+}
+
+nextButton.addEventListener("click", () => {
+  currentQuestion++;
+
+  if (currentQuestion >= questions.length) {
+    alert("🎉 全問クリア！");
+    currentQuestion = 0;
+  }
+
+  showQuestion(currentQuestion);
 });
 
 /* ===== Ver0.8 追加ここまで ===== */
+
+/
