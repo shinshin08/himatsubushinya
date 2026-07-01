@@ -99,3 +99,26 @@ answers.forEach(button => {
 });
 
 /* ===== Ver0.6 追加ここまで ===== */
+
+/* ===== Ver0.7 追加ここから ===== */
+
+const nextButton = document.getElementById("nextQuestion");
+
+answers.forEach(button => {
+
+    button.addEventListener("click", () => {
+        nextButton.style.display = "block";
+    });
+
+});
+
+nextButton.addEventListener("click", () => {
+
+    result.style.display = "none";
+    nextButton.style.display = "none";
+
+    alert("次の問題はまだ準備中ニャ🐱");
+
+});
+
+/* ===== Ver0.7 追加ここまで ===== */
