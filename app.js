@@ -73,7 +73,7 @@ playButton.addEventListener("click", () => {
 
 /* ===== Ver0.5 追加ここまで ===== */
   
-/* ===== Ver0.6 追加ここから ===== */
+/* =/* ===== Ver0.6.1 追加ここから ===== */
 
 const answers = document.querySelectorAll(".answer");
 const result = document.getElementById("result");
@@ -82,12 +82,14 @@ answers.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        if(button.dataset.answer === "1"){
+        const selected = Number(button.dataset.answer);
+
+        if (selected === questions[currentQuestion].answer) {
 
             result.textContent = "🎉 正解！";
             result.style.color = "#2e8b57";
 
-        }else{
+        } else {
 
             result.textContent = "❌ 不正解";
             result.style.color = "#e74c3c";
@@ -95,12 +97,13 @@ answers.forEach(button => {
         }
 
         result.style.display = "block";
+        nextButton.style.display = "block";
 
     });
 
 });
 
-/* ===== Ver0.6 追加ここまで ===== */
+/* ===== Ver0.6.1 追加ここまで ===== */
 
 /* ===== Ver0.7 追加ここから ===== */
 
