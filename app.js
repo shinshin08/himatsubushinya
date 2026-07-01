@@ -114,13 +114,9 @@ answers.forEach(button => {
 
 });
 
-nextButton.addEventListener("click", () => {
-
-    result.style.display = "none";
-    nextButton.style.display = "none";
-
-    alert("次の問題はまだ準備中ニャ🐱");
-
+nextButton.addEventListener(() => {
+    ...
+    showQuestion(currentQuestion);
 });
 
 /* ===== Ver0.7 追加ここまで ===== */
